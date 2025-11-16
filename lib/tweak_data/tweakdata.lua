@@ -10,7 +10,7 @@ for id, _ in pairs(tweak_data.projectiles) do
 	end
 end
 
--- todo: snowball, poison
+-- grenades
 
 tweak_data.projectiles.frag.damage = 200
 tweak_data.projectiles.frag.launch_speed = 400
@@ -45,8 +45,7 @@ self.projectiles.dada_com.player_damage = 10
 
 self.projectiles.wpn_gre_electric.damage = 50
 
-
-
+-- launchers
 
 tweak_data.projectiles.launcher_frag.damage = 150
 tweak_data.projectiles.launcher_frag.launch_speed = 1000
@@ -102,20 +101,13 @@ self.projectiles.underbarrel_electric.damage = 75
 self.projectiles.underbarrel_electric.launch_speed = 2000
 self.projectiles.underbarrel_electric.player_damage = 10
 
-
-
-
-
-
-
-
+-- arrows/bolts
 
 self.projectiles.west_arrow.damage = 100
 self.projectiles.west_arrow.launch_speed = 2000
 
 self.projectiles.west_arrow_exp.damage = 50
 self.projectiles.west_arrow_exp.player_damage = 10
-
 
 self.projectiles.bow_poison_arrow.damage = 5
 
@@ -167,7 +159,7 @@ self.projectiles.elastic_arrow_poison.damage = 10
 self.projectiles.elastic_arrow_exp.damage = 100
 self.projectiles.elastic_arrow_exp.player_damage = 10
 
-
+-- throwable weapons
 
 self.projectiles.wpn_prj_four.damage = 50
 self.projectiles.wpn_prj_four.launch_speed = 2000
@@ -178,3 +170,4 @@ self.projectiles.wpn_prj_ace.launch_speed = 4000
 self.projectiles.wpn_prj_jav.damage = 400
 
 self.projectiles.wpn_prj_jav.launch_speed = 2000
+
