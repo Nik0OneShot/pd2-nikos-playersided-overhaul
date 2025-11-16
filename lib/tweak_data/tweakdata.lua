@@ -32,9 +32,6 @@ self.projectiles.dynamite.damage = 400
 self.projectiles.dynamite.launch_speed = 250
 self.projectiles.dynamite.player_damage = 20
 
-self.projectiles.wpn_prj_target.damage = 100
-self.projectiles.wpn_prj_target.launch_speed = 1000
-
 self.projectiles.frag_com.damage = 200
 self.projectiles.frag_com.launch_speed = 400
 self.projectiles.frag_com.player_damage = 10
@@ -170,4 +167,8 @@ self.projectiles.wpn_prj_ace.launch_speed = 4000
 self.projectiles.wpn_prj_jav.damage = 400
 
 self.projectiles.wpn_prj_jav.launch_speed = 2000
+
+self.projectiles.wpn_prj_target.damage = 100
+self.projectiles.wpn_prj_target.launch_speed = 1000
+
 
