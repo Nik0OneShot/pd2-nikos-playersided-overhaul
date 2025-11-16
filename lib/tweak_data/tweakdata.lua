@@ -41,62 +41,135 @@ tweak_data.projectiles.dada_com.launch_speed = 400
 tweak_data.projectiles.dada_com.player_damage = 10
 
 tweak_data.projectiles.wpn_gre_electric.damage = 50
+tweak_data.projectiles.wpn_gre_electric.launch_speed = 400
+tweak_data.projectiles.wpn_gre_electric.player_damage = 10
+
+tweak_data.projectiles.poison_gas_grenade.damage = 25
+tweak_data.projectiles.poison_gas_grenade.launch_speed = 400
+tweak_data.projectiles.poison_gas_grenade.poison_gas_duration = 10
+
+tweak_data.projectiles.sticky_grenade.damage = 400
+tweak_data.projectiles.sticky_grenade.launch_speed = 400
+tweak_data.projectiles.sticky_grenade.player_damage = 20
 
 -- launchers
 
+tweak_data.projectiles.launcher_rocket.damage = 2000
+tweak_data.projectiles.launcher_rocket.launch_speed = 5000
+tweak_data.projectiles.launcher_rocket.player_damage = 20
+
+tweak_data.projectiles.rocket_frag.damage = 2000
+tweak_data.projectiles.rocket_frag.launch_speed = 5000
+tweak_data.projectiles.rocket_frag.player_damage = 25
+
+tweak_data.projectiles.rocket_ray_frag.damage = 500
+tweak_data.projectiles.rocket_ray_frag.launch_speed = 5000
+tweak_data.projectiles.rocket_ray_frag.player_damage = 25
+
 tweak_data.projectiles.launcher_frag.damage = 150
 tweak_data.projectiles.launcher_frag.launch_speed = 1000
-tweak_data.projectiles.launcher_frag.player_damage = 10
-
-tweak_data.projectiles.launcher_rocket.damage = 2000
-tweak_data.projectiles.launcher_rocket.launch_speed = 2000
-tweak_data.projectiles.launcher_rocket.player_damage = 20
+tweak_data.projectiles.launcher_frag.player_damage = 15
 
 tweak_data.projectiles.launcher_incendiary.damage = 10
 tweak_data.projectiles.launcher_incendiary.launch_speed = 1000
-tweak_data.projectiles.launcher_incendiary.player_damage = 10
+tweak_data.projectiles.launcher_incendiary.player_damage = 5
 
 tweak_data.projectiles.launcher_frag_m32.damage = 150
+tweak_data.projectiles.launcher_frag_m32.launch_speed = 1000
+tweak_data.projectiles.launcher_frag_m32.player_damage = 15
 
 tweak_data.projectiles.launcher_frag_china.damage = 150
+tweak_data.projectiles.launcher_frag_china.launch_speed = 1000
+tweak_data.projectiles.launcher_frag_china.player_damage = 15
 
 tweak_data.projectiles.launcher_frag_arbiter.damage = 150
 tweak_data.projectiles.launcher_frag_arbiter.launch_speed = 2000
-tweak_data.projectiles.launcher_frag_arbiter.player_damage = 10
+tweak_data.projectiles.launcher_frag_arbiter.player_damage = 15
 
 tweak_data.projectiles.launcher_incendiary_arbiter.damage = 10
 tweak_data.projectiles.launcher_incendiary_arbiter.launch_speed = 2000
-tweak_data.projectiles.launcher_incendiary_arbiter.player_damage = 10
-
-tweak_data.projectiles.rocket_frag.damage = 2000
-tweak_data.projectiles.rocket_frag.launch_speed = 2000
-tweak_data.projectiles.rocket_frag.player_damage = 10
-
-tweak_data.projectiles.rocket_ray_frag.damage = 500
+tweak_data.projectiles.launcher_incendiary_arbiter.player_damage = 5
 
 tweak_data.projectiles.launcher_electric.damage = 75
-tweak_data.projectiles.launcher_electric.launch_speed = 2000
-tweak_data.projectiles.launcher_electric.player_damage = 10
+tweak_data.projectiles.launcher_electric.launch_speed = 1000
+tweak_data.projectiles.launcher_electric.player_damage = 7
 
 tweak_data.projectiles.launcher_electric_m32.damage = 75
-tweak_data.projectiles.launcher_electric_m32.launch_speed = 2000
-tweak_data.projectiles.launcher_electric_m32.player_damage = 10
+tweak_data.projectiles.launcher_electric_m32.launch_speed = 1000
+tweak_data.projectiles.launcher_electric_m32.player_damage = 7
 
 tweak_data.projectiles.launcher_electric_china.damage = 75
-tweak_data.projectiles.launcher_electric_china.launch_speed = 2000
-tweak_data.projectiles.launcher_electric_china.player_damage = 10
+tweak_data.projectiles.launcher_electric_china.launch_speed = 1000
+tweak_data.projectiles.launcher_electric_china.player_damage = 7
 
 tweak_data.projectiles.launcher_electric_slap.damage = 75
-tweak_data.projectiles.launcher_electric_slap.launch_speed = 2000
-tweak_data.projectiles.launcher_electric_slap.player_damage = 10
+tweak_data.projectiles.launcher_electric_slap.launch_speed = 1000
+tweak_data.projectiles.launcher_electric_slap.player_damage = 7
 
 tweak_data.projectiles.launcher_electric_arbiter.damage = 75
 tweak_data.projectiles.launcher_electric_arbiter.launch_speed = 2000
-tweak_data.projectiles.launcher_electric_arbiter.player_damage = 10
+tweak_data.projectiles.launcher_electric_arbiter.player_damage = 7
 
 tweak_data.projectiles.underbarrel_electric.damage = 75
-tweak_data.projectiles.underbarrel_electric.launch_speed = 2000
-tweak_data.projectiles.underbarrel_electric.player_damage = 10
+tweak_data.projectiles.underbarrel_electric.launch_speed = 1000
+tweak_data.projectiles.underbarrel_electric.player_damage = 7
+
+tweak_data.projectiles.launcher_poison.damage = 25
+tweak_data.projectiles.launcher_poison.launch_speed = 1000
+tweak_data.projectiles.launcher_poison.player_damage = 5
+tweak_data.projectiles.launcher_poison.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_ms3gl_conversion.damage = 25
+tweak_data.projectiles.launcher_poison_ms3gl_conversion.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_ms3gl_conversion.player_damage = 5
+tweak_data.projectiles.launcher_poison_ms3gl_conversion.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_gre_m79.damage = 25
+tweak_data.projectiles.launcher_poison_gre_m79.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_gre_m79.player_damage = 5
+tweak_data.projectiles.launcher_poison_gre_m79.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_m32.damage = 25
+tweak_data.projectiles.launcher_poison_m32.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_m32.player_damage = 5
+tweak_data.projectiles.launcher_poison_m32.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_groza.damage = 25
+tweak_data.projectiles.launcher_poison_groza.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_groza.player_damage = 5
+tweak_data.projectiles.launcher_poison_groza.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_china.damage = 25
+tweak_data.projectiles.launcher_poison_china.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_china.player_damage = 5
+tweak_data.projectiles.launcher_poison_china.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_arbiter.damage = 25
+tweak_data.projectiles.launcher_poison_arbiter.launch_speed = 2000
+tweak_data.projectiles.launcher_poison_arbiter.player_damage = 5
+tweak_data.projectiles.launcher_poison_arbiter.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_slap.damage = 25
+tweak_data.projectiles.launcher_poison_slap.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_slap.player_damage = 5
+tweak_data.projectiles.launcher_poison_slap.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_poison_contraband.damage = 25
+tweak_data.projectiles.launcher_poison_contraband.launch_speed = 1000
+tweak_data.projectiles.launcher_poison_contraband.player_damage = 5
+tweak_data.projectiles.launcher_poison_contraband.poison_gas_duration = 10
+
+tweak_data.projectiles.launcher_frag_ms3gl.damage = 150
+tweak_data.projectiles.launcher_frag_ms3gl.launch_speed = 1000
+tweak_data.projectiles.launcher_frag_ms3gl.player_damage = 15
+
+tweak_data.projectiles.launcher_incendiary_ms3gl.damage = 10
+tweak_data.projectiles.launcher_incendiary_ms3gl.launch_speed = 1000
+tweak_data.projectiles.launcher_incendiary_ms3gl.player_damage = 5
+
+tweak_data.projectiles.launcher_electric_ms3gl.damage = 75
+tweak_data.projectiles.launcher_electric_ms3gl.launch_speed = 1000
+tweak_data.projectiles.launcher_electric_ms3gl.player_damage = 7
 
 -- arrows/bolts
 
@@ -171,5 +244,4 @@ tweak_data.projectiles.wpn_prj_jav.launch_speed = 2000
 tweak_data.projectiles.wpn_prj_target.damage = 100
 tweak_data.projectiles.wpn_prj_target.launch_speed = 1000
 
-
-
+tweak_data.projectiles.xmas_snowball.damage = 20
