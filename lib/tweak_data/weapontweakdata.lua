@@ -203,6 +203,25 @@ self.p226.can_shoot_through_enemy = true
 self.p226.can_shoot_through_shield = false
 self.p226.can_shoot_through_wall = false
 
+-- 5/7 AP
+
+self.lemming.CLIP_AMMO_MAX = 12
+self.lemming.AMMO_MAX = ammo_tables.pistol_medium
+self.lemming.AMMO_PICKUP = ammo_pickup_tables.pistol_medium
+self.lemming.fire_mode_data.fire_rate = 60 / 800
+self.lemming.stats.damage = 104
+self.lemming.stats.spread = 12
+self.lemming.stats.spread_moving = 7
+self.lemming.stats.recoil = 8
+self.lemming.stats.concealment = 30
+self.lemming.stats.suppression = 6
+
+self.lemming.kick = kick_tables.pistol_medium
+self.lemming.armor_piercing_chance = 1
+self.lemming.can_shoot_through_enemy = true
+self.lemming.can_shoot_through_shield = true
+self.lemming.can_shoot_through_wall = false
+
 
 -- HIGH PISTOLS
 
@@ -366,6 +385,72 @@ self.korth.can_shoot_through_enemy = true
 self.korth.can_shoot_through_shield = false
 self.korth.can_shoot_through_wall = true
 
+-- kang arms model 54
+
+self.type54.CLIP_AMMO_MAX = 7
+self.type54.AMMO_MAX = ammo_tables.magnum
+self.type54.AMMO_PICKUP = ammo_pickup_tables.magnum
+self.type54.fire_mode_data.fire_rate = 60 / 500
+self.type54.stats.damage = 200
+self.type54.stats.spread = 8
+self.type54.stats.spread_moving = 6
+self.type54.stats.recoil = 15
+self.type54.stats.concealment = 30
+self.type54.stats.suppression = 9
+
+self.type54.kick = kick_tables.magnum
+self.type54.armor_piercing_chance = 1
+self.type54.can_shoot_through_enemy = true
+self.type54.can_shoot_through_shield = false
+self.type54.can_shoot_through_wall = false
+
+-- kang arms model 54 underbarrel
+
+self.type54_underbarrel.CLIP_AMMO_MAX = 1
+self.type54_underbarrel.AMMO_MAX = 3
+self.type54_underbarrel.AMMO_PICKUP = ammo_pickup_tables.hand_cannon
+self.type54_underbarrel.stats.damage = 1500
+self.type54_underbarrel.stats_modifiers = { damage = 1 }
+
+-- parabellum
+
+self.breech.CLIP_AMMO_MAX = 8
+self.breech.AMMO_MAX = ammo_tables.magnum
+self.breech.AMMO_PICKUP = ammo_pickup_tables.magnum
+self.breech.fire_mode_data.fire_rate = 60 / 600
+self.breech.stats.damage = 275
+self.breech.stats.spread = 12
+self.breech.stats.spread_moving = 6
+self.breech.stats.recoil = 8
+self.breech.stats.concealment = 30
+self.breech.stats.suppression = 5
+
+self.breech.kick = kick_tables.magnum
+self.breech.armor_piercing_chance = 1
+self.breech.can_shoot_through_enemy = true
+self.breech.can_shoot_through_shield = false
+self.breech.can_shoot_through_wall = false
+
+-- castigo 44
+
+self.chinchilla.CLIP_AMMO_MAX = 6
+self.chinchilla.AMMO_MAX = ammo_tables.magnum
+self.chinchilla.AMMO_PICKUP = ammo_pickup_tables.magnum
+self.chinchilla.fire_mode_data.fire_rate = 60 / 800
+self.chinchilla.stats.damage = 250
+self.chinchilla.stats.spread = 18
+self.chinchilla.stats.spread_moving = 11
+self.chinchilla.stats.recoil = 7
+self.chinchilla.stats.concealment = 30
+self.chinchilla.stats.suppression = 6
+
+self.chinchilla.kick = kick_tables.magnum
+self.chinchilla.armor_piercing_chance = 1
+self.chinchilla.can_shoot_through_enemy = true
+self.chinchilla.can_shoot_through_shield = false
+self.chinchilla.can_shoot_through_wall = false
+
+
 -- REVOLVERS
 
 -- bronco .44
@@ -454,7 +539,40 @@ self.tecci.stats.concealment = 4
 self.tecci.stats.suppression = 8
 
 self.tecci.kick = kick_tables.assault_rifle_high
-self.tecci.armor_piercing_chance = 0.5
+self.tecci.armor_piercing_chance = 0.3
+
+-- clarion
+
+self.famas.CLIP_AMMO_MAX = 30
+self.famas.AMMO_MAX = ammo_tables.assault_rifle_high
+self.famas.AMMO_PICKUP = ammo_pickup_tables.assault_rifle_high
+self.famas.fire_mode_data.fire_rate = 60 / 1200
+self.famas.stats.damage = 46
+self.famas.stats.spread = 8
+self.famas.stats.spread_moving = 4
+self.famas.stats.recoil = 16
+self.famas.stats.concealment = 11
+self.famas.stats.suppression = 10
+
+self.famas.kick = kick_tables.assault_rifle_high
+self.famas.armor_piercing_chance = 0.3
+
+-- valkyria
+
+self.asval.CLIP_AMMO_MAX = 20
+self.asval.AMMO_MAX = ammo_tables.assault_rifle_high
+self.asval.AMMO_PICKUP = ammo_pickup_tables.assault_rifle_high
+self.asval.fire_mode_data.fire_rate = 60 / 1000
+self.asval.stats.damage = 54
+self.asval.stats.spread = 10
+self.asval.stats.spread_moving = 10
+self.asval.stats.recoil = 15
+self.asval.stats.concealment = 17
+self.asval.stats.reload = 14
+self.asval.stats.suppression = 7
+
+self.asval.kick = kick_tables.assault_rifle_high
+self.asval.armor_piercing_chance = 0.6
 
 -- MEDIUM RIFLES
 
@@ -488,7 +606,7 @@ self.ak74.stats.concealment = 16
 self.ak74.stats.suppression = 8
 
 self.ak74.kick = kick_tables.assault_rifle_medium
-self.ak74.armor_piercing_chance = 0.3
+self.ak74.armor_piercing_chance = 0.5
 
 -- union 5.56
 
@@ -517,9 +635,26 @@ self.l85a2.stats.spread = 12
 self.l85a2.stats.spread_moving = 10
 self.l85a2.stats.recoil = 8
 self.l85a2.stats.concealment = 4
+self.l85a2.stats.suppression = 8
 
 self.l85a2.kick = kick_tables.assault_rifle_medium
-self.l85a2.armor_piercing_chance = 1
+self.l85a2.armor_piercing_chance = 0.4
+
+-- lions roar
+
+self.vhs.CLIP_AMMO_MAX = 30
+self.vhs.AMMO_MAX = ammo_tables.assault_rifle_medium
+self.vhs.AMMO_PICKUP = ammo_pickup_tables.assault_rifle_medium
+self.vhs.fire_mode_data.fire_rate = 60 / 750
+self.vhs.stats.damage = 64
+self.vhs.stats.spread = 15
+self.vhs.stats.spread_moving = 11
+self.vhs.stats.recoil = 10
+self.vhs.stats.concealment = 8
+self.vhs.stats.suppression = 8
+
+self.vhs.kick = kick_tables.assault_rifle_medium
+self.vhs.armor_piercing_chance = 0.3
 
 -- LOW RIFLES
 
@@ -569,7 +704,7 @@ self.akm.stats.concealment = 16
 self.akm.stats.suppression = 7
 
 self.akm.kick = kick_tables.assault_rifle_low
-self.akm.armor_piercing_chance = 0.5
+self.akm.armor_piercing_chance = 0.75
 
 -- CANNONS
 
@@ -650,7 +785,7 @@ self.sub2000.fire_mode_data.fire_rate = 60 / 600
 self.sub2000.stats.damage = 225
 self.sub2000.stats.spread = 16
 self.sub2000.stats.spread_moving = 10
-self.sub2000.stats.recoil = 10
+self.sub2000.stats.recoil = 12
 self.sub2000.stats.concealment = 8
 self.sub2000.stats.suppression = 6
 
@@ -659,6 +794,25 @@ self.sub2000.armor_piercing_chance = 1
 self.sub2000.can_shoot_through_enemy = true
 self.sub2000.can_shoot_through_shield = false
 self.sub2000.can_shoot_through_wall = false
+
+-- galant
+
+self.ching.CLIP_AMMO_MAX = 8
+self.ching.AMMO_MAX = ammo_tables.dmr - 2
+self.ching.AMMO_PICKUP = ammo_pickup_tables.dmr
+self.ching.fire_mode_data.fire_rate = 60 / 250
+self.ching.stats.damage = 265
+self.ching.stats.spread = 19
+self.ching.stats.spread_moving = 11
+self.ching.stats.recoil = 10
+self.ching.stats.concealment = 12
+self.ching.stats.suppression = 4
+
+self.ching.kick = kick_tables.dmr
+self.ching.armor_piercing_chance = 1
+self.ching.can_shoot_through_enemy = true
+self.ching.can_shoot_through_shield = false
+self.ching.can_shoot_through_wall = false
 
 -- BATTLE RIFLES
 
