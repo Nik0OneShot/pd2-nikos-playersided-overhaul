@@ -1,12 +1,10 @@
 local FALLOFF_TEMPLATE = WeaponFalloffTemplate.setup_weapon_falloff_templates()
 
 Hooks:PostHook(WeaponTweakData, "init", "weapontweakdata_init", function(self)
-	-- allow weapons to go above the vanilla limit in terms of damage.
-	self.stats.damage = {}
-	for i = 0.1, 50000, 0.1 do table.insert(self.stats.damage, i) end
+-- allow weapons to go above the vanilla limit in terms of damage.
+self.stats.damage = {} for i = 0.1, 50000, 0.1 do table.insert(self.stats.damage, i) end
 
 local kick_tables = {
-
 pistol_low = { standing = { 1, 1, 0.01, 0.01 }, crouching = { 0.8, 0.8, 0.01, 0.01 }, steelsight = { 0.6, 0.6, 0.01, 0.01 }},
 pistol_medium = { standing = { 0.8, 0.8, 0.01, 0.01 }, crouching = { 0.6, 0.6, 0.01, 0.01 }, steelsight = { 0.4, 0.4, 0.01, 0.01 }},
 pistol_high = { standing = { 0.6, 0.6, 0.01, 0.01 }, crouching = { 0.4, 0.4, 0.01, 0.01 }, steelsight = { 0.2, 0.2, 0.01, 0.01 }},
@@ -22,51 +20,29 @@ assault_rifle_high = { standing = { 1, 1, 0.01, 0.01 }, crouching = { 1, 1, 0.01
 cannon = { standing = { 1.5, 1.5, 0.01, 0.01 }, crouching = { 1.4, 1.4, 0.01, 0.01 }, steelsight = { 1.3, 1.3, 0.01, 0.01 }},
 dmr = { standing = { 1.4, 1.4, 0.01, 0.01 }, crouching = { 1.3, 1.3, 0.01, 0.01 }, steelsight = { 1.2, 1.2, 0.01, 0.01 }},
 battle_rifle = { standing = { 1.3, 1.3, 0.01, 0.01 }, crouching = { 1.2, 1.2, 0.01, 0.01 }, steelsight = { 1.1, 1.1, 0.01, 0.01 }}
-
 }
 
 local ammo_tables = {
+pistol_low = 36, pistol_medium = 48, pistol_high = 60,
 
-pistol_low = 36,
-pistol_medium = 48,
-pistol_high = 60,
+hand_cannon = 18, magnum = 24, revolver = 30, 
 
-hand_cannon = 18,
-magnum = 24,
-revolver = 30, 
+assault_rifle_low = 120, assault_rifle_medium = 150, assault_rifle_high = 180,
 
-assault_rifle_low = 120,
-assault_rifle_medium = 150,
-assault_rifle_high = 180,
-
-cannon = 60,
-dmr = 90,
-battle_rifle = 120
-
+cannon = 60, dmr = 90, battle_rifle = 120
 }
 
 local ammo_pickup_tables = {
+pistol_low = { 1, 4 }, pistol_medium = { 1, 5 }, pistol_high = { 1, 6 },
 
-pistol_low = { 1, 4 },
-pistol_medium = { 1, 5 },
-pistol_high = { 1, 6 },
+hand_cannon = { 0.1, 0.5 }, magnum = { 0.5, 2 }, revolver = { 1, 2 },
 
-hand_cannon = { 0.1, 0.5 },
-magnum = { 0.5, 2 },
-revolver = { 1, 2 },
+assault_rifle_low = { 2, 6 }, assault_rifle_medium = { 2, 8 }, assault_rifle_high = { 2, 10 },
 
-assault_rifle_low = { 2, 6 },
-assault_rifle_medium = { 2, 8 },
-assault_rifle_high = { 2, 10 },
-
-cannon = { 0.1, 1 },
-dmr = { 1, 2 },
-battle_rifle = { 1, 4 }
-
+cannon = { 0.1, 1 }, dmr = { 1, 2 }, battle_rifle = { 1, 4 }
 }
 
 -- LOW PISTOLS
-
 -- crosskill
 
 self.colt_1911.CLIP_AMMO_MAX = 7
@@ -127,7 +103,7 @@ self.m1911.can_shoot_through_wall = false
 -- chimano custom
 
 self.g22c.CLIP_AMMO_MAX = 17
-self.g22c.AMMO_MAX = ammo_tables.pistol_low - 2
+self.g22c.AMMO_MAX = ammo_tables.pistol_low - 3
 self.g22c.AMMO_PICKUP = ammo_pickup_tables.pistol_low
 self.g22c.fire_mode_data.fire_rate = 60 / 300
 self.g22c.stats.damage = 100
@@ -143,9 +119,28 @@ self.g22c.can_shoot_through_enemy = true
 self.g22c.can_shoot_through_shield = false
 self.g22c.can_shoot_through_wall = false
 
+-- contractor
+
+self.packrat.CLIP_AMMO_MAX = 15
+self.packrat.AMMO_MAX = ammo_tables.pistol_low - 6
+self.packrat.AMMO_PICKUP = ammo_pickup_tables.pistol_low
+self.packrat.fire_mode_data.fire_rate = 60 / 600
+self.packrat.stats.damage = 125
+self.packrat.stats.spread = 13
+self.packrat.stats.spread_moving = 9
+self.packrat.stats.recoil = 10
+self.packrat.stats.concealment = 30
+self.packrat.stats.suppression = 8
+
+self.packrat.kick = kick_tables.pistol_low
+self.packrat.armor_piercing_chance = 0.5
+self.packrat.can_shoot_through_enemy = true
+self.packrat.can_shoot_through_shield = false
+self.packrat.can_shoot_through_wall = false
+
+
 
 -- MEDIUM PISTOLS
-
 -- chimano 88
 
 self.glock_17.CLIP_AMMO_MAX = 12
@@ -224,7 +219,6 @@ self.lemming.can_shoot_through_wall = false
 
 
 -- HIGH PISTOLS
-
 -- stryk 18c
 
 self.glock_18c.CLIP_AMMO_MAX = 20
@@ -303,7 +297,6 @@ self.ppk.can_shoot_through_shield = false
 self.ppk.can_shoot_through_wall = false
 
 -- HAND CANNONS
-
 -- chimano compact
 
 self.g26.CLIP_AMMO_MAX = 4
@@ -364,8 +357,27 @@ self.c96.can_shoot_through_enemy = true
 self.c96.can_shoot_through_shield = true
 self.c96.can_shoot_through_wall = false
 
--- MAGNUMS
+-- RUS12 angry tiger
 
+self.rsh12.CLIP_AMMO_MAX = 5
+self.rsh12.AMMO_MAX = ammo_tables.hand_cannon - 3
+self.rsh12.AMMO_PICKUP = ammo_pickup_tables.hand_cannon
+self.rsh12.fire_mode_data.fire_rate = 60 / 600
+self.rsh12.stats.damage = 1000
+self.rsh12.stats_modifiers = { damage = 1 }
+self.rsh12.stats.spread = 14
+self.rsh12.stats.spread_moving = 8
+self.rsh12.stats.recoil = 6
+self.rsh12.stats.concealment = 25
+self.rsh12.stats.suppression = 3
+
+self.rsh12.kick = kick_tables.hand_cannon
+self.rsh12.armor_piercing_chance = 1
+self.rsh12.can_shoot_through_enemy = true
+self.rsh12.can_shoot_through_shield = true
+self.rsh12.can_shoot_through_wall = false
+
+-- MAGNUMS
 -- kahn .357
 
 self.korth.CLIP_AMMO_MAX = 8
@@ -452,7 +464,6 @@ self.chinchilla.can_shoot_through_wall = false
 
 
 -- REVOLVERS
-
 -- bronco .44
 
 self.new_raging_bull.CLIP_AMMO_MAX = 6
@@ -491,8 +502,26 @@ self.sparrow.can_shoot_through_enemy = true
 self.sparrow.can_shoot_through_shield = false
 self.sparrow.can_shoot_through_wall = false
 
--- HIGH RIFLES
+-- frenchman model 87
 
+self.model3.CLIP_AMMO_MAX = 6
+self.model3.AMMO_MAX = ammo_tables.revolver
+self.model3.AMMO_PICKUP = ammo_pickup_tables.revolver
+self.model3.fire_mode_data.fire_rate = 60 / 400
+self.model3.stats.damage = 225
+self.model3.stats.spread = 16
+self.model3.stats.spread_moving = 10
+self.model3.stats.recoil = 5
+self.model3.stats.concealment = 25
+self.model3.stats.suppression = 4
+
+self.model3.kick = kick_tables.revolver
+self.model3.armor_piercing_chance = 1
+self.model3.can_shoot_through_enemy = true
+self.model3.can_shoot_through_shield = false
+self.model3.can_shoot_through_wall = false
+
+-- HIGH RIFLES
 -- commando 552
 
 self.s552.CLIP_AMMO_MAX = 30
@@ -574,8 +603,26 @@ self.asval.stats.suppression = 7
 self.asval.kick = kick_tables.assault_rifle_high
 self.asval.armor_piercing_chance = 0.6
 
--- MEDIUM RIFLES
+-- tempest 21
 
+self.komodo.timers.reload_not_empty = 2.1 -- reload animation doesn't match its timer
+self.komodo.timers.reload_empty = 2.85 -- reload animation doesn't match its timer
+
+self.komodo.CLIP_AMMO_MAX = 30
+self.komodo.AMMO_MAX = ammo_tables.assault_rifle_high
+self.komodo.AMMO_PICKUP = ammo_pickup_tables.assault_rifle_high
+self.komodo.fire_mode_data.fire_rate = 60 / 800
+self.komodo.stats.damage = 58
+self.komodo.stats.spread = 9
+self.komodo.stats.spread_moving = 7
+self.komodo.stats.recoil = 14
+self.komodo.stats.concealment = 14
+self.komodo.stats.suppression = 10
+
+self.komodo.kick = kick_tables.assault_rifle_high
+self.komodo.armor_piercing_chance = 0.3
+
+-- MEDIUM RIFLES
 -- amcar
 
 self.amcar.CLIP_AMMO_MAX = 30
@@ -657,7 +704,6 @@ self.vhs.kick = kick_tables.assault_rifle_medium
 self.vhs.armor_piercing_chance = 0.3
 
 -- LOW RIFLES
-
 -- car 4
 
 self.new_m4.CLIP_AMMO_MAX = 30
@@ -706,8 +752,23 @@ self.akm.stats.suppression = 7
 self.akm.kick = kick_tables.assault_rifle_low
 self.akm.armor_piercing_chance = 0.75
 
--- CANNONS
+-- ak5
 
+self.ak5.CLIP_AMMO_MAX = 30
+self.ak5.AMMO_MAX = ammo_tables.assault_rifle_low
+self.ak5.AMMO_PICKUP = ammo_pickup_tables.assault_rifle_low
+self.ak5.fire_mode_data.fire_rate = 60 / 800
+self.ak5.stats.damage = 94
+self.ak5.stats.spread = 14
+self.ak5.stats.spread_moving = 10
+self.ak5.stats.recoil = 10
+self.ak5.stats.concealment = 12
+self.ak5.stats.suppression = 8
+
+self.ak5.kick = kick_tables.assault_rifle_low
+self.ak5.armor_piercing_chance = 0.3
+
+-- CANNONS
 -- KETCHNOV byk-1
 
 self.groza.CLIP_AMMO_MAX = 10
@@ -756,7 +817,6 @@ self.akm_gold.can_shoot_through_shield = true
 self.akm_gold.can_shoot_through_wall = false
 
 -- DMRS
-
 -- m308
 
 self.new_m14.CLIP_AMMO_MAX = 14
@@ -815,7 +875,6 @@ self.ching.can_shoot_through_shield = false
 self.ching.can_shoot_through_wall = false
 
 -- BATTLE RIFLES
-
 -- amr 16
 
 self.m16.CLIP_AMMO_MAX = 20
@@ -863,5 +922,21 @@ self.flint.stats.suppression = 5
 
 self.flint.kick = kick_tables.battle_rifle
 self.flint.armor_piercing_chance = 1
+
+-- gecko 7.62
+
+self.galil.CLIP_AMMO_MAX = 30
+self.galil.AMMO_MAX = ammo_tables.battle_rifle
+self.galil.AMMO_PICKUP = ammo_pickup_tables.battle_rifle
+self.galil.fire_mode_data.fire_rate = 60 / 600
+self.galil.stats.damage = 130
+self.galil.stats.spread = 15
+self.galil.stats.spread_moving = 8
+self.galil.stats.recoil = 6
+self.galil.stats.concealment = 5
+self.galil.stats.suppression = 4
+
+self.galil.kick = kick_tables.battle_rifle
+self.galil.armor_piercing_chance = 1
 
 end)
